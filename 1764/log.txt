@@ -1,4 +1,17 @@
-(scrapy10)paul@paul-SATELLITE-R830:~/scrapinghub/scrapy/sslissues$ scrapy shell https://shop.clares.co.uk
+$ scrapy version -v
+Scrapy    : 1.0.5
+lxml      : 3.5.0.0
+libxml2   : 2.9.2
+Twisted   : 15.5.0
+Python    : 2.7.9 (default, Apr  2 2015, 15:33:21) - [GCC 4.9.2]
+pyOpenSSL : 0.15.1 (OpenSSL 1.0.2d 9 Jul 2015)
+Platform  : Linux-4.2.0-27-generic-x86_64-with-Ubuntu-15.10-wily
+
+
+
+# This is with SSLv2_METHOD -- you get an exception
+
+(scrapy10)paul@paul-SATELLITE-R830:~/scrapinghub/scrapy/sslissues$ scrapy shell https://shop.clares.co.uk -s DOWNLOADER_CLIENTCONTEXTFACTORY="sslissues.contextfactory.SSLv2ContextFactory"
 2016-02-11 16:14:05 [scrapy] INFO: Scrapy 1.0.5 started (bot: sslissues)
 2016-02-11 16:14:05 [scrapy] INFO: Optional features available: ssl, http11
 2016-02-11 16:14:05 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'sslissues.spiders', 'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter', 'SPIDER_MODULES': ['sslissues.spiders'], 'BOT_NAME': 'sslissues', 'LOGSTATS_INTERVAL': 0, 'DOWNLOADER_CLIENTCONTEXTFACTORY': 'sslissues.contextfactory.SSLv2ContextFactory'}
@@ -48,8 +61,11 @@ Traceback (most recent call last):
   File "/home/paul/.virtualenvs/scrapy10/local/lib/python2.7/site-packages/OpenSSL/SSL.py", line 468, in __init__
     raise ValueError("No such protocol")
 ValueError: No such protocol
-(scrapy10)paul@paul-SATELLITE-R830:~/scrapinghub/scrapy/sslissues$ nano sslissues/contextfactory.py
-(scrapy10)paul@paul-SATELLITE-R830:~/scrapinghub/scrapy/sslissues$ nano sslissues/settings.py
+
+
+
+# Scrapy 1.0.5 default, i.e. TLSv1_METHOD
+
 (scrapy10)paul@paul-SATELLITE-R830:~/scrapinghub/scrapy/sslissues$ scrapy shell https://shop.clares.co.uk
 2016-02-11 16:17:11 [scrapy] INFO: Scrapy 1.0.5 started (bot: sslissues)
 2016-02-11 16:17:11 [scrapy] INFO: Optional features available: ssl, http11
@@ -75,8 +91,10 @@ ValueError: No such protocol
 2016-02-11 16:17:13 [root] DEBUG: Using default logger
 2016-02-11 16:17:13 [root] DEBUG: Using default logger
 
-In [1]: 
-Do you really want to exit ([y]/n)? y
+
+
+
+# TLS V1.0 only
 
 (scrapy10)paul@paul-SATELLITE-R830:~/scrapinghub/scrapy/sslissues$ scrapy shell https://shop.clares.co.uk -s DOWNLOADER_CLIENTCONTEXTFACTORY="sslissues.contextfactory.TLSv1ContextFactory"
 2016-02-11 16:17:51 [scrapy] INFO: Scrapy 1.0.5 started (bot: sslissues)
@@ -103,8 +121,9 @@ Do you really want to exit ([y]/n)? y
 2016-02-11 16:17:55 [root] DEBUG: Using default logger
 2016-02-11 16:17:55 [root] DEBUG: Using default logger
 
-In [1]: 
-Do you really want to exit ([y]/n)? 
+
+
+# TLS v1.1 only
 
 (scrapy10)paul@paul-SATELLITE-R830:~/scrapinghub/scrapy/sslissues$ scrapy shell https://shop.clares.co.uk -s DOWNLOADER_CLIENTCONTEXTFACTORY="sslissues.contextfactory.TLSv11ContextFactory"
 2016-02-11 16:19:13 [scrapy] INFO: Scrapy 1.0.5 started (bot: sslissues)
@@ -131,8 +150,10 @@ Do you really want to exit ([y]/n)?
 2016-02-11 16:19:16 [root] DEBUG: Using default logger
 2016-02-11 16:19:16 [root] DEBUG: Using default logger
 
-In [1]: 
-Do you really want to exit ([y]/n)? 
+
+
+# TLS v1.2 only
+
 
 (scrapy10)paul@paul-SATELLITE-R830:~/scrapinghub/scrapy/sslissues$ scrapy shell https://shop.clares.co.uk -s DOWNLOADER_CLIENTCONTEXTFACTORY="sslissues.contextfactory.TLSv12ContextFactory"
 2016-02-11 16:21:03 [scrapy] INFO: Scrapy 1.0.5 started (bot: sslissues)
@@ -159,5 +180,32 @@ Do you really want to exit ([y]/n)?
 2016-02-11 16:21:07 [root] DEBUG: Using default logger
 2016-02-11 16:21:07 [root] DEBUG: Using default logger
 
-In [1]: 
-Do you really want to exit ([y]/n)? 
+
+
+# SSLv23_METHOD, i.e. negotiate suitable protocol with remote host
+
+$ scrapy shell https://shop.clares.co.uk -s DOWNLOADER_CLIENTCONTEXTFACTORY="sslissues.contextfactory.TLSFlexibleContextFactory"
+2016-02-11 16:32:41 [scrapy] INFO: Scrapy 1.0.5 started (bot: sslissues)
+2016-02-11 16:32:41 [scrapy] INFO: Optional features available: ssl, http11
+2016-02-11 16:32:41 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'sslissues.spiders', 'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter', 'SPIDER_MODULES': ['sslissues.spiders'], 'BOT_NAME': 'sslissues', 'LOGSTATS_INTERVAL': 0, 'DOWNLOADER_CLIENTCONTEXTFACTORY': 'sslissues.contextfactory.TLSFlexibleContextFactory'}
+2016-02-11 16:32:41 [scrapy] INFO: Enabled extensions: CloseSpider, TelnetConsole, CoreStats, SpiderState
+2016-02-11 16:32:41 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, UserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2016-02-11 16:32:41 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2016-02-11 16:32:41 [scrapy] INFO: Enabled item pipelines: 
+2016-02-11 16:32:41 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-02-11 16:32:41 [scrapy] INFO: Spider opened
+2016-02-11 16:32:43 [scrapy] DEBUG: Crawled (200) <GET https://shop.clares.co.uk> (referer: None)
+[s] Available Scrapy objects:
+[s]   crawler    <scrapy.crawler.Crawler object at 0x7f819df1a150>
+[s]   item       {}
+[s]   request    <GET https://shop.clares.co.uk>
+[s]   response   <200 https://shop.clares.co.uk>
+[s]   settings   <scrapy.settings.Settings object at 0x7f8196433b10>
+[s]   spider     <ClaresSpider 'clares' at 0x7f8195add950>
+[s] Useful shortcuts:
+[s]   shelp()           Shell help (print this help)
+[s]   fetch(req_or_url) Fetch request (or URL) and update local objects
+[s]   view(response)    View response in a browser
+2016-02-11 16:32:43 [root] DEBUG: Using default logger
+2016-02-11 16:32:43 [root] DEBUG: Using default logger
+
