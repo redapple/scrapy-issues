@@ -1,0 +1,163 @@
+(scrapy10)paul@paul-SATELLITE-R830:~/scrapinghub/scrapy/sslissues$ scrapy shell https://shop.clares.co.uk
+2016-02-11 16:14:05 [scrapy] INFO: Scrapy 1.0.5 started (bot: sslissues)
+2016-02-11 16:14:05 [scrapy] INFO: Optional features available: ssl, http11
+2016-02-11 16:14:05 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'sslissues.spiders', 'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter', 'SPIDER_MODULES': ['sslissues.spiders'], 'BOT_NAME': 'sslissues', 'LOGSTATS_INTERVAL': 0, 'DOWNLOADER_CLIENTCONTEXTFACTORY': 'sslissues.contextfactory.SSLv2ContextFactory'}
+2016-02-11 16:14:05 [scrapy] INFO: Enabled extensions: CloseSpider, TelnetConsole, CoreStats, SpiderState
+2016-02-11 16:14:05 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, UserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2016-02-11 16:14:05 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2016-02-11 16:14:05 [scrapy] INFO: Enabled item pipelines: 
+2016-02-11 16:14:05 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-02-11 16:14:05 [scrapy] INFO: Spider opened
+Traceback (most recent call last):
+  File "/home/paul/.virtualenvs/scrapy10/bin/scrapy", line 11, in <module>
+    sys.exit(execute())
+  File "/home/paul/.virtualenvs/scrapy10/local/lib/python2.7/site-packages/scrapy/cmdline.py", line 143, in execute
+    _run_print_help(parser, _run_command, cmd, args, opts)
+  File "/home/paul/.virtualenvs/scrapy10/local/lib/python2.7/site-packages/scrapy/cmdline.py", line 89, in _run_print_help
+    func(*a, **kw)
+  File "/home/paul/.virtualenvs/scrapy10/local/lib/python2.7/site-packages/scrapy/cmdline.py", line 150, in _run_command
+    cmd.run(args, opts)
+  File "/home/paul/.virtualenvs/scrapy10/local/lib/python2.7/site-packages/scrapy/commands/shell.py", line 67, in run
+    shell.start(url=url)
+  File "/home/paul/.virtualenvs/scrapy10/local/lib/python2.7/site-packages/scrapy/shell.py", line 44, in start
+    self.fetch(url, spider)
+  File "/home/paul/.virtualenvs/scrapy10/local/lib/python2.7/site-packages/scrapy/shell.py", line 87, in fetch
+    reactor, self._schedule, request, spider)
+  File "/home/paul/.virtualenvs/scrapy10/local/lib/python2.7/site-packages/twisted/internet/threads.py", line 122, in blockingCallFromThread
+    result.raiseException()
+  File "/home/paul/.virtualenvs/scrapy10/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 45, in mustbe_deferred
+    result = f(*args, **kw)
+  File "/home/paul/.virtualenvs/scrapy10/local/lib/python2.7/site-packages/scrapy/core/downloader/handlers/__init__.py", line 41, in download_request
+    return handler(request, spider)
+  File "/home/paul/.virtualenvs/scrapy10/local/lib/python2.7/site-packages/scrapy/core/downloader/handlers/http11.py", line 44, in download_request
+    return agent.download_request(request)
+  File "/home/paul/.virtualenvs/scrapy10/local/lib/python2.7/site-packages/scrapy/core/downloader/handlers/http11.py", line 211, in download_request
+    d = agent.request(method, url, headers, bodyproducer)
+  File "/home/paul/.virtualenvs/scrapy10/local/lib/python2.7/site-packages/twisted/web/client.py", line 1594, in request
+    endpoint = self._getEndpoint(parsedURI)
+  File "/home/paul/.virtualenvs/scrapy10/local/lib/python2.7/site-packages/twisted/web/client.py", line 1578, in _getEndpoint
+    return self._endpointFactory.endpointForURI(uri)
+  File "/home/paul/.virtualenvs/scrapy10/local/lib/python2.7/site-packages/twisted/web/client.py", line 1454, in endpointForURI
+    uri.port)
+  File "/home/paul/.virtualenvs/scrapy10/local/lib/python2.7/site-packages/twisted/web/client.py", line 982, in creatorForNetloc
+    context = self._webContextFactory.getContext(hostname, port)
+  File "/home/paul/.virtualenvs/scrapy10/local/lib/python2.7/site-packages/scrapy/core/downloader/contextfactory.py", line 22, in getContext
+    ctx = ClientContextFactory.getContext(self)
+  File "/home/paul/.virtualenvs/scrapy10/local/lib/python2.7/site-packages/twisted/internet/ssl.py", line 147, in getContext
+    ctx = self._contextFactory(self.method)
+  File "/home/paul/.virtualenvs/scrapy10/local/lib/python2.7/site-packages/OpenSSL/SSL.py", line 468, in __init__
+    raise ValueError("No such protocol")
+ValueError: No such protocol
+(scrapy10)paul@paul-SATELLITE-R830:~/scrapinghub/scrapy/sslissues$ nano sslissues/contextfactory.py
+(scrapy10)paul@paul-SATELLITE-R830:~/scrapinghub/scrapy/sslissues$ nano sslissues/settings.py
+(scrapy10)paul@paul-SATELLITE-R830:~/scrapinghub/scrapy/sslissues$ scrapy shell https://shop.clares.co.uk
+2016-02-11 16:17:11 [scrapy] INFO: Scrapy 1.0.5 started (bot: sslissues)
+2016-02-11 16:17:11 [scrapy] INFO: Optional features available: ssl, http11
+2016-02-11 16:17:11 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'sslissues.spiders', 'SPIDER_MODULES': ['sslissues.spiders'], 'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter', 'LOGSTATS_INTERVAL': 0, 'BOT_NAME': 'sslissues'}
+2016-02-11 16:17:11 [scrapy] INFO: Enabled extensions: CloseSpider, TelnetConsole, CoreStats, SpiderState
+2016-02-11 16:17:11 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, UserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2016-02-11 16:17:11 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2016-02-11 16:17:11 [scrapy] INFO: Enabled item pipelines: 
+2016-02-11 16:17:11 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-02-11 16:17:11 [scrapy] INFO: Spider opened
+2016-02-11 16:17:13 [scrapy] DEBUG: Crawled (200) <GET https://shop.clares.co.uk> (referer: None)
+[s] Available Scrapy objects:
+[s]   crawler    <scrapy.crawler.Crawler object at 0x7fbc5700b150>
+[s]   item       {}
+[s]   request    <GET https://shop.clares.co.uk>
+[s]   response   <200 https://shop.clares.co.uk>
+[s]   settings   <scrapy.settings.Settings object at 0x7fbc4f523b10>
+[s]   spider     <ClaresSpider 'clares' at 0x7fbc4ebcc390>
+[s] Useful shortcuts:
+[s]   shelp()           Shell help (print this help)
+[s]   fetch(req_or_url) Fetch request (or URL) and update local objects
+[s]   view(response)    View response in a browser
+2016-02-11 16:17:13 [root] DEBUG: Using default logger
+2016-02-11 16:17:13 [root] DEBUG: Using default logger
+
+In [1]: 
+Do you really want to exit ([y]/n)? y
+
+(scrapy10)paul@paul-SATELLITE-R830:~/scrapinghub/scrapy/sslissues$ scrapy shell https://shop.clares.co.uk -s DOWNLOADER_CLIENTCONTEXTFACTORY="sslissues.contextfactory.TLSv1ContextFactory"
+2016-02-11 16:17:51 [scrapy] INFO: Scrapy 1.0.5 started (bot: sslissues)
+2016-02-11 16:17:51 [scrapy] INFO: Optional features available: ssl, http11
+2016-02-11 16:17:51 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'sslissues.spiders', 'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter', 'SPIDER_MODULES': ['sslissues.spiders'], 'BOT_NAME': 'sslissues', 'LOGSTATS_INTERVAL': 0, 'DOWNLOADER_CLIENTCONTEXTFACTORY': 'sslissues.contextfactory.TLSv1ContextFactory'}
+2016-02-11 16:17:51 [scrapy] INFO: Enabled extensions: CloseSpider, TelnetConsole, CoreStats, SpiderState
+2016-02-11 16:17:52 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, UserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2016-02-11 16:17:52 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2016-02-11 16:17:52 [scrapy] INFO: Enabled item pipelines: 
+2016-02-11 16:17:52 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-02-11 16:17:52 [scrapy] INFO: Spider opened
+2016-02-11 16:17:55 [scrapy] DEBUG: Crawled (200) <GET https://shop.clares.co.uk> (referer: None)
+[s] Available Scrapy objects:
+[s]   crawler    <scrapy.crawler.Crawler object at 0x7f92c5896150>
+[s]   item       {}
+[s]   request    <GET https://shop.clares.co.uk>
+[s]   response   <200 https://shop.clares.co.uk>
+[s]   settings   <scrapy.settings.Settings object at 0x7f92bddafb10>
+[s]   spider     <ClaresSpider 'clares' at 0x7f92bd459950>
+[s] Useful shortcuts:
+[s]   shelp()           Shell help (print this help)
+[s]   fetch(req_or_url) Fetch request (or URL) and update local objects
+[s]   view(response)    View response in a browser
+2016-02-11 16:17:55 [root] DEBUG: Using default logger
+2016-02-11 16:17:55 [root] DEBUG: Using default logger
+
+In [1]: 
+Do you really want to exit ([y]/n)? 
+
+(scrapy10)paul@paul-SATELLITE-R830:~/scrapinghub/scrapy/sslissues$ scrapy shell https://shop.clares.co.uk -s DOWNLOADER_CLIENTCONTEXTFACTORY="sslissues.contextfactory.TLSv11ContextFactory"
+2016-02-11 16:19:13 [scrapy] INFO: Scrapy 1.0.5 started (bot: sslissues)
+2016-02-11 16:19:13 [scrapy] INFO: Optional features available: ssl, http11
+2016-02-11 16:19:13 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'sslissues.spiders', 'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter', 'SPIDER_MODULES': ['sslissues.spiders'], 'BOT_NAME': 'sslissues', 'LOGSTATS_INTERVAL': 0, 'DOWNLOADER_CLIENTCONTEXTFACTORY': 'sslissues.contextfactory.TLSv11ContextFactory'}
+2016-02-11 16:19:14 [scrapy] INFO: Enabled extensions: CloseSpider, TelnetConsole, CoreStats, SpiderState
+2016-02-11 16:19:14 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, UserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2016-02-11 16:19:14 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2016-02-11 16:19:14 [scrapy] INFO: Enabled item pipelines: 
+2016-02-11 16:19:14 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-02-11 16:19:14 [scrapy] INFO: Spider opened
+2016-02-11 16:19:16 [scrapy] DEBUG: Crawled (200) <GET https://shop.clares.co.uk> (referer: None)
+[s] Available Scrapy objects:
+[s]   crawler    <scrapy.crawler.Crawler object at 0x7f7ce9ad9150>
+[s]   item       {}
+[s]   request    <GET https://shop.clares.co.uk>
+[s]   response   <200 https://shop.clares.co.uk>
+[s]   settings   <scrapy.settings.Settings object at 0x7f7ce1ff2b10>
+[s]   spider     <ClaresSpider 'clares' at 0x7f7ce169d9d0>
+[s] Useful shortcuts:
+[s]   shelp()           Shell help (print this help)
+[s]   fetch(req_or_url) Fetch request (or URL) and update local objects
+[s]   view(response)    View response in a browser
+2016-02-11 16:19:16 [root] DEBUG: Using default logger
+2016-02-11 16:19:16 [root] DEBUG: Using default logger
+
+In [1]: 
+Do you really want to exit ([y]/n)? 
+
+(scrapy10)paul@paul-SATELLITE-R830:~/scrapinghub/scrapy/sslissues$ scrapy shell https://shop.clares.co.uk -s DOWNLOADER_CLIENTCONTEXTFACTORY="sslissues.contextfactory.TLSv12ContextFactory"
+2016-02-11 16:21:03 [scrapy] INFO: Scrapy 1.0.5 started (bot: sslissues)
+2016-02-11 16:21:03 [scrapy] INFO: Optional features available: ssl, http11
+2016-02-11 16:21:03 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'sslissues.spiders', 'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter', 'SPIDER_MODULES': ['sslissues.spiders'], 'BOT_NAME': 'sslissues', 'LOGSTATS_INTERVAL': 0, 'DOWNLOADER_CLIENTCONTEXTFACTORY': 'sslissues.contextfactory.TLSv12ContextFactory'}
+2016-02-11 16:21:03 [scrapy] INFO: Enabled extensions: CloseSpider, TelnetConsole, CoreStats, SpiderState
+2016-02-11 16:21:03 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, UserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2016-02-11 16:21:03 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2016-02-11 16:21:03 [scrapy] INFO: Enabled item pipelines: 
+2016-02-11 16:21:03 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-02-11 16:21:03 [scrapy] INFO: Spider opened
+2016-02-11 16:21:07 [scrapy] DEBUG: Crawled (200) <GET https://shop.clares.co.uk> (referer: None)
+[s] Available Scrapy objects:
+[s]   crawler    <scrapy.crawler.Crawler object at 0x7f233599b150>
+[s]   item       {}
+[s]   request    <GET https://shop.clares.co.uk>
+[s]   response   <200 https://shop.clares.co.uk>
+[s]   settings   <scrapy.settings.Settings object at 0x7f232deb4b10>
+[s]   spider     <ClaresSpider 'clares' at 0x7f232d55e950>
+[s] Useful shortcuts:
+[s]   shelp()           Shell help (print this help)
+[s]   fetch(req_or_url) Fetch request (or URL) and update local objects
+[s]   view(response)    View response in a browser
+2016-02-11 16:21:07 [root] DEBUG: Using default logger
+2016-02-11 16:21:07 [root] DEBUG: Using default logger
+
+In [1]: 
+Do you really want to exit ([y]/n)? 
