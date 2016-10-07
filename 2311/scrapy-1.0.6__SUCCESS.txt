@@ -1,3 +1,12 @@
+$ scrapy version -v
+Scrapy    : 1.0.6
+lxml      : 3.6.1.0
+libxml2   : 2.9.3
+Twisted   : 16.3.0
+Python    : 2.7.9 (default, Apr  2 2015, 15:33:21) - [GCC 4.9.2]
+pyOpenSSL : 16.0.0 (OpenSSL 1.0.2g  1 Mar 2016)
+Platform  : Linux-4.4.0-38-generic-x86_64-with-Ubuntu-16.04-xenial
+
 $ scrapy shell https://subscribe.wsj.com/printpack/
 2016-10-07 11:00:01 [scrapy] INFO: Scrapy 1.0.6 started (bot: scrapybot)
 2016-10-07 11:00:01 [scrapy] INFO: Optional features available: ssl, http11
