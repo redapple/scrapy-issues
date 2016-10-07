@@ -1,0 +1,88 @@
+$ openssl version -a
+OpenSSL 1.0.2g  1 Mar 2016
+built on: reproducible build, date unspecified
+platform: debian-amd64
+options:  bn(64,64) rc4(16x,int) des(idx,cisc,16,int) blowfish(idx)
+compiler: cc -I. -I.. -I../include  -fPIC -DOPENSSL_PIC -DOPENSSL_THREADS -D_REENTRANT -DDSO_DLFCN -DHAVE_DLFCN_H -m64 -DL_ENDIAN -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -Wl,-Bsymbolic-functions -Wl,-z,relro -Wa,--noexecstack -Wall -DMD32_REG_T=int -DOPENSSL_IA32_SSE2 -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_MONT5 -DOPENSSL_BN_ASM_GF2m -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DMD5_ASM -DAES_ASM -DVPAES_ASM -DBSAES_ASM -DWHIRLPOOL_ASM -DGHASH_ASM -DECP_NISTZ256_ASM
+OPENSSLDIR: "/usr/lib/ssl"
+
+$ openssl s_client -connect subscribe.wsj.com:443
+CONNECTED(00000003)
+depth=2 C = US, O = "VeriSign, Inc.", OU = VeriSign Trust Network, OU = "(c) 2006 VeriSign, Inc. - For authorized use only", CN = VeriSign Class 3 Public Primary Certification Authority - G5
+verify return:1
+depth=1 C = US, O = Symantec Corporation, OU = Symantec Trust Network, CN = Symantec Class 3 Secure Server CA - G4
+verify return:1
+depth=0 C = US, ST = New Jersey, L = Princeton, O = Dow Jones and Company, OU = EIS SUB PRINT WEB, CN = subscribe.wsj.com
+verify return:1
+---
+Certificate chain
+ 0 s:/C=US/ST=New Jersey/L=Princeton/O=Dow Jones and Company/OU=EIS SUB PRINT WEB/CN=subscribe.wsj.com
+   i:/C=US/O=Symantec Corporation/OU=Symantec Trust Network/CN=Symantec Class 3 Secure Server CA - G4
+ 1 s:/C=US/O=Symantec Corporation/OU=Symantec Trust Network/CN=Symantec Class 3 Secure Server CA - G4
+   i:/C=US/O=VeriSign, Inc./OU=VeriSign Trust Network/OU=(c) 2006 VeriSign, Inc. - For authorized use only/CN=VeriSign Class 3 Public Primary Certification Authority - G5
+ 2 s:/C=US/O=VeriSign, Inc./OU=VeriSign Trust Network/OU=(c) 2006 VeriSign, Inc. - For authorized use only/CN=VeriSign Class 3 Public Primary Certification Authority - G5
+   i:/C=US/O=VeriSign, Inc./OU=VeriSign Trust Network/OU=(c) 2006 VeriSign, Inc. - For authorized use only/CN=VeriSign Class 3 Public Primary Certification Authority - G5
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIIGBjCCBO6gAwIBAgIQZuWPAXC7SCvIohkSfurRxTANBgkqhkiG9w0BAQsFADB+
+MQswCQYDVQQGEwJVUzEdMBsGA1UEChMUU3ltYW50ZWMgQ29ycG9yYXRpb24xHzAd
+BgNVBAsTFlN5bWFudGVjIFRydXN0IE5ldHdvcmsxLzAtBgNVBAMTJlN5bWFudGVj
+IENsYXNzIDMgU2VjdXJlIFNlcnZlciBDQSAtIEc0MB4XDTE2MDkyMTAwMDAwMFoX
+DTE3MDkyMjIzNTk1OVowgY4xCzAJBgNVBAYTAlVTMRMwEQYDVQQIDApOZXcgSmVy
+c2V5MRIwEAYDVQQHDAlQcmluY2V0b24xHjAcBgNVBAoMFURvdyBKb25lcyBhbmQg
+Q29tcGFueTEaMBgGA1UECwwRRUlTIFNVQiBQUklOVCBXRUIxGjAYBgNVBAMMEXN1
+YnNjcmliZS53c2ouY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA
+uzMW8+QxYvTzZVWJG27rtaIu6y8WYJTFfCV0BcQUrcAJrt6PLajrV6rwcQTarRrK
+2yGzdbmueG940ukxK0RhO8LloyWFZ7nRpbA2LFGiizGuKLYfJ3IH5Gxi+kG5GQTE
+PwLBJK7JMFxqs5CHueN6ZNK+ORebeJ+Cy369dasO7QFlrx1OrROlKC0ZfuUlhRMs
+JrAvgtCMZr86OfQt+4r6GorL4jMBJ+Wigh90xYZbzhfo99Os1BhQ/Snis/U5Qijq
+/bQ08RdmTrHWnUvUEwNDE879EvaTv7fu+0hRNfXbLTsw17BJg6NqOMXwjWgU0QgP
+32grCjhf0CfdjRk+IGDFaQIDAQABo4ICbTCCAmkwHAYDVR0RBBUwE4IRc3Vic2Ny
+aWJlLndzai5jb20wCQYDVR0TBAIwADAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0lBBYw
+FAYIKwYBBQUHAwEGCCsGAQUFBwMCMGEGA1UdIARaMFgwVgYGZ4EMAQICMEwwIwYI
+KwYBBQUHAgEWF2h0dHBzOi8vZC5zeW1jYi5jb20vY3BzMCUGCCsGAQUFBwICMBkM
+F2h0dHBzOi8vZC5zeW1jYi5jb20vcnBhMB8GA1UdIwQYMBaAFF9gz2GQVd+EQxSK
+YCqy9Xr0QxjvMCsGA1UdHwQkMCIwIKAeoByGGmh0dHA6Ly9zcy5zeW1jYi5jb20v
+c3MuY3JsMFcGCCsGAQUFBwEBBEswSTAfBggrBgEFBQcwAYYTaHR0cDovL3NzLnN5
+bWNkLmNvbTAmBggrBgEFBQcwAoYaaHR0cDovL3NzLnN5bWNiLmNvbS9zcy5jcnQw
+ggEDBgorBgEEAdZ5AgQCBIH0BIHxAO8AdgDd6x0reg1PpiCLga2BaHB+Lo6dAdVc
+iI09EcTNtuy+zAAAAVdMuv7JAAAEAwBHMEUCIFIuvpdtxSttlRsUDLB+JX8LTAeQ
+2fk+3QZVdVtfGRQLAiEA9Fw5MDqCEnd2unwtQZoSpAfhtqZ7MLrttZRjTL1uh9gA
+dQBo9pj4H2SCvjqM7rkoHUz8cVFdZ5PURNEKZ6y7T0/7xAAAAVdMuv8IAAAEAwBG
+MEQCIDanwb2OH/Bb/7B8Sxic3sVqC6zbCFGJIa4jUAosUaTGAiBLQKJrK0Vy8N6u
+mslr9PKjdkaX32bA+Ttx+NAzWr06UjANBgkqhkiG9w0BAQsFAAOCAQEANKRcaXSa
+P8pk90I7pw6b+UF5KDWcZRAu170M3C5O+wujHYyHVcGKEvRX+UHiiirlOSs1FXCQ
+k1OmMEBlffXnz1s0dDTC9+iT7z5R/NufU0VoOIuhVvWnuwzQcH7H5aoJXC04eoR2
+eQiQapaYpl5XFZ7923t4McJW8/2YkmTMbVb/Zuq5CDSy2wtjjoW6PhpEido7Eq78
+BVD4Ep5F4s/IAV1Nyg9TDx8f8a2AgR/sn+AgOt6HPjLEedK3An77Hx68Z4dM7Duu
+GpECU/re1Mpd1RNTPItcikbOH43NKBHUytrao3f+HfiOfN1h5HPCZVIL7sRRJeyt
+D0/81ffLUZZqkg==
+-----END CERTIFICATE-----
+subject=/C=US/ST=New Jersey/L=Princeton/O=Dow Jones and Company/OU=EIS SUB PRINT WEB/CN=subscribe.wsj.com
+issuer=/C=US/O=Symantec Corporation/OU=Symantec Trust Network/CN=Symantec Class 3 Secure Server CA - G4
+---
+No client certificate CA names sent
+---
+SSL handshake has read 4274 bytes and written 615 bytes
+---
+New, TLSv1/SSLv3, Cipher is RC4-MD5
+Server public key is 2048 bit
+Secure Renegotiation IS supported
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+SSL-Session:
+    Protocol  : TLSv1
+    Cipher    : RC4-MD5
+    Session-ID: 00004F751FD4DA6F65FF16CACA9B70C5E5852EF55858585857F75B4800000D33
+    Session-ID-ctx:
+    Master-Key: C3A12A9121795B6D9AC736BEF83B97F88AED5465CD35C42E42EF4E89FD95F38EACC79DF0D5D7D424D40B0781FE3A20CB
+    Key-Arg   : None
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    Start Time: 1475828552
+    Timeout   : 300 (sec)
+    Verify return code: 0 (ok)
+---

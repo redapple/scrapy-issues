@@ -1,0 +1,41 @@
+$ curl -v https://subscribe.wsj.com/printpack/
+*   Trying 205.203.148.137...
+* Connected to subscribe.wsj.com (205.203.148.137) port 443 (#0)
+* found 174 certificates in /etc/ssl/certs/ca-certificates.crt
+* found 708 certificates in /etc/ssl/certs
+* ALPN, offering http/1.1
+* SSL connection using TLS1.0 / RSA_3DES_EDE_CBC_SHA1
+* 	 server certificate verification OK
+* 	 server certificate status verification SKIPPED
+* 	 common name: subscribe.wsj.com (matched)
+* 	 server certificate expiration date OK
+* 	 server certificate activation date OK
+* 	 certificate public key: RSA
+* 	 certificate version: #3
+* 	 subject: C=US,ST=New Jersey,L=Princeton,O=Dow Jones and Company,OU=EIS SUB PRINT WEB,CN=subscribe.wsj.com
+* 	 start date: Wed, 21 Sep 2016 00:00:00 GMT
+* 	 expire date: Fri, 22 Sep 2017 23:59:59 GMT
+* 	 issuer: C=US,O=Symantec Corporation,OU=Symantec Trust Network,CN=Symantec Class 3 Secure Server CA - G4
+* 	 compression: NULL
+* ALPN, server did not agree to a protocol
+> GET /printpack/ HTTP/1.1
+> Host: subscribe.wsj.com
+> User-Agent: curl/7.47.0
+> Accept: */*
+>
+< HTTP/1.1 200 OK
+< Date: Fri, 07 Oct 2016 08:28:23 GMT
+< Last-Modified: Thu, 29 Sep 2016 19:49:55 GMT
+< Accept-Ranges: bytes
+< Content-Length: 261
+< Content-Type: text/html
+<
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+  <TITLE>Subscribe to The Journal</TITLE>
+  <META HTTP-EQUIV="Refresh" CONTENT="0;URL=https://buy.wsj.com/wsjcol16v2?inttrackingCode=aaqnz43b&icid=WSJ_ON_PHP_ACQ_NA">
+</HEAD>
+</HTML>
+* Connection #0 to host subscribe.wsj.com left intact
