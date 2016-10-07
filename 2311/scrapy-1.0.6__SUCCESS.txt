@@ -1,0 +1,27 @@
+$ scrapy shell https://subscribe.wsj.com/printpack/
+2016-10-07 11:00:01 [scrapy] INFO: Scrapy 1.0.6 started (bot: scrapybot)
+2016-10-07 11:00:01 [scrapy] INFO: Optional features available: ssl, http11
+2016-10-07 11:00:01 [scrapy] INFO: Overridden settings: {'LOGSTATS_INTERVAL': 0, 'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter'}
+2016-10-07 11:00:01 [scrapy] INFO: Enabled extensions: CloseSpider, TelnetConsole, CoreStats, SpiderState
+2016-10-07 11:00:01 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, UserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2016-10-07 11:00:01 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2016-10-07 11:00:01 [scrapy] INFO: Enabled item pipelines:
+2016-10-07 11:00:01 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6024
+2016-10-07 11:00:01 [scrapy] INFO: Spider opened
+2016-10-07 11:00:02 [scrapy] DEBUG: Redirecting (meta refresh) to <GET https://buy.wsj.com/wsjcol16v2?inttrackingCode=aaqnz43b&icid=WSJ_ON_PHP_ACQ_NA> from <GET https://subscribe.wsj.com/printpack/>
+2016-10-07 11:00:04 [scrapy] DEBUG: Redirecting (301) to <GET https://buy.wsj.com/wsjcol16v2/?inttrackingCode=aaqnz43b&icid=WSJ_ON_PHP_ACQ_NA> from <GET https://buy.wsj.com/wsjcol16v2?inttrackingCode=aaqnz43b&icid=WSJ_ON_PHP_ACQ_NA>
+2016-10-07 11:00:05 [scrapy] DEBUG: Crawled (200) <GET https://buy.wsj.com/wsjcol16v2/?inttrackingCode=aaqnz43b&icid=WSJ_ON_PHP_ACQ_NA> (referer: None)
+[s] Available Scrapy objects:
+[s]   crawler    <scrapy.crawler.Crawler object at 0x7fb5f10ea090>
+[s]   item       {}
+[s]   request    <GET https://subscribe.wsj.com/printpack/>
+[s]   response   <200 https://buy.wsj.com/wsjcol16v2/?inttrackingCode=aaqnz43b&icid=WSJ_ON_PHP_ACQ_NA>
+[s]   settings   <scrapy.settings.Settings object at 0x7fb5e91ddb50>
+[s]   spider     <DefaultSpider 'default' at 0x7fb5e7b05910>
+[s] Useful shortcuts:
+[s]   shelp()           Shell help (print this help)
+[s]   fetch(req_or_url) Fetch request (or URL) and update local objects
+[s]   view(response)    View response in a browser
+2016-10-07 11:00:05 [root] DEBUG: Using default logger
+2016-10-07 11:00:05 [root] DEBUG: Using default logger
+
