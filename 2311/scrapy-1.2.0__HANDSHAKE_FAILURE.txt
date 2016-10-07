@@ -1,3 +1,13 @@
+$ scrapy version -v
+Scrapy    : 1.2.0
+lxml      : 3.6.4.0
+libxml2   : 2.9.4
+Twisted   : 16.4.1
+Python    : 2.7.12 (default, Jul  1 2016, 15:12:24) - [GCC 5.4.0 20160609]
+pyOpenSSL : 16.1.0 (OpenSSL 1.0.2g  1 Mar 2016)
+Platform  : Linux-4.4.0-38-generic-x86_64-with-Ubuntu-16.04-xenial
+
+
 $ scrapy shell https://subscribe.wsj.com/printpack/
 2016-10-07 10:32:47 [scrapy] INFO: Scrapy 1.2.0 started (bot: scrapybot)
 2016-10-07 10:32:47 [scrapy] INFO: Overridden settings: {'LOGSTATS_INTERVAL': 0, 'DUPEFILTER_CLASS': 'scrapy.dupefilters.BaseDupeFilter'}
