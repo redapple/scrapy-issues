@@ -1,0 +1,133 @@
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Handshake Protocol: Client Hello
+        Content Type: Handshake (22)
+        Version: TLS 1.0 (0x0301)
+        Length: 194
+        Handshake Protocol: Client Hello
+            Handshake Type: Client Hello (1)
+            Length: 190
+            Version: TLS 1.2 (0x0303)
+            Random
+                GMT Unix Time: Nov 29, 2092 10:42:34.000000000 CET
+                Random Bytes: 09912fbc35c769c7e0f202048989f350b34de395e03ebc17...
+            Session ID Length: 0
+            Cipher Suites Length: 56
+            Cipher Suites (28 suites)
+                Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 (0xc02c)
+                Cipher Suite: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (0xc030)
+                Cipher Suite: TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (0x009f)
+                Cipher Suite: TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 (0xcca9)
+                Cipher Suite: TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (0xcca8)
+                Cipher Suite: TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (0xccaa)
+                Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 (0xc02b)
+                Cipher Suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (0xc02f)
+                Cipher Suite: TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (0x009e)
+                Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 (0xc024)
+                Cipher Suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (0xc028)
+                Cipher Suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (0x006b)
+                Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 (0xc023)
+                Cipher Suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (0xc027)
+                Cipher Suite: TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (0x0067)
+                Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA (0xc00a)
+                Cipher Suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (0xc014)
+                Cipher Suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA (0x0039)
+                Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA (0xc009)
+                Cipher Suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (0xc013)
+                Cipher Suite: TLS_DHE_RSA_WITH_AES_128_CBC_SHA (0x0033)
+                Cipher Suite: TLS_RSA_WITH_AES_256_GCM_SHA384 (0x009d)
+                Cipher Suite: TLS_RSA_WITH_AES_128_GCM_SHA256 (0x009c)
+                Cipher Suite: TLS_RSA_WITH_AES_256_CBC_SHA256 (0x003d)
+                Cipher Suite: TLS_RSA_WITH_AES_128_CBC_SHA256 (0x003c)
+                Cipher Suite: TLS_RSA_WITH_AES_256_CBC_SHA (0x0035)
+                Cipher Suite: TLS_RSA_WITH_AES_128_CBC_SHA (0x002f)
+                Cipher Suite: TLS_EMPTY_RENEGOTIATION_INFO_SCSV (0x00ff)
+            Compression Methods Length: 1
+            Compression Methods (1 method)
+                Compression Method: null (0)
+            Extensions Length: 93
+            Extension: server_name
+                Type: server_name (0x0000)
+                Length: 19
+                Server Name Indication extension
+                    Server Name list length: 17
+                    Server Name Type: host_name (0)
+                    Server Name length: 14
+                    Server Name: www.skelbiu.lt
+            Extension: ec_point_formats
+                Type: ec_point_formats (0x000b)
+                Length: 4
+                EC point formats Length: 3
+                Elliptic curves point formats (3)
+                    EC point format: uncompressed (0)
+                    EC point format: ansiX962_compressed_prime (1)
+                    EC point format: ansiX962_compressed_char2 (2)
+            Extension: elliptic_curves
+                Type: elliptic_curves (0x000a)
+                Length: 10
+                Elliptic Curves Length: 8
+                Elliptic curves (4 curves)
+                    Elliptic curve: ecdh_x25519 (0x001d)
+                    Elliptic curve: secp256r1 (0x0017)
+                    Elliptic curve: secp521r1 (0x0019)
+                    Elliptic curve: secp384r1 (0x0018)
+            Extension: SessionTicket TLS
+                Type: SessionTicket TLS (0x0023)
+                Length: 0
+                Data (0 bytes)
+            Extension: signature_algorithms
+                Type: signature_algorithms (0x000d)
+                Length: 32
+                Signature Hash Algorithms Length: 30
+                Signature Hash Algorithms (15 algorithms)
+                    Signature Hash Algorithm: 0x0601
+                        Signature Hash Algorithm Hash: SHA512 (6)
+                        Signature Hash Algorithm Signature: RSA (1)
+                    Signature Hash Algorithm: 0x0602
+                        Signature Hash Algorithm Hash: SHA512 (6)
+                        Signature Hash Algorithm Signature: DSA (2)
+                    Signature Hash Algorithm: 0x0603
+                        Signature Hash Algorithm Hash: SHA512 (6)
+                        Signature Hash Algorithm Signature: ECDSA (3)
+                    Signature Hash Algorithm: 0x0501
+                        Signature Hash Algorithm Hash: SHA384 (5)
+                        Signature Hash Algorithm Signature: RSA (1)
+                    Signature Hash Algorithm: 0x0502
+                        Signature Hash Algorithm Hash: SHA384 (5)
+                        Signature Hash Algorithm Signature: DSA (2)
+                    Signature Hash Algorithm: 0x0503
+                        Signature Hash Algorithm Hash: SHA384 (5)
+                        Signature Hash Algorithm Signature: ECDSA (3)
+                    Signature Hash Algorithm: 0x0401
+                        Signature Hash Algorithm Hash: SHA256 (4)
+                        Signature Hash Algorithm Signature: RSA (1)
+                    Signature Hash Algorithm: 0x0402
+                        Signature Hash Algorithm Hash: SHA256 (4)
+                        Signature Hash Algorithm Signature: DSA (2)
+                    Signature Hash Algorithm: 0x0403
+                        Signature Hash Algorithm Hash: SHA256 (4)
+                        Signature Hash Algorithm Signature: ECDSA (3)
+                    Signature Hash Algorithm: 0x0301
+                        Signature Hash Algorithm Hash: SHA224 (3)
+                        Signature Hash Algorithm Signature: RSA (1)
+                    Signature Hash Algorithm: 0x0302
+                        Signature Hash Algorithm Hash: SHA224 (3)
+                        Signature Hash Algorithm Signature: DSA (2)
+                    Signature Hash Algorithm: 0x0303
+                        Signature Hash Algorithm Hash: SHA224 (3)
+                        Signature Hash Algorithm Signature: ECDSA (3)
+                    Signature Hash Algorithm: 0x0201
+                        Signature Hash Algorithm Hash: SHA1 (2)
+                        Signature Hash Algorithm Signature: RSA (1)
+                    Signature Hash Algorithm: 0x0202
+                        Signature Hash Algorithm Hash: SHA1 (2)
+                        Signature Hash Algorithm Signature: DSA (2)
+                    Signature Hash Algorithm: 0x0203
+                        Signature Hash Algorithm Hash: SHA1 (2)
+                        Signature Hash Algorithm Signature: ECDSA (3)
+            Extension: encrypt then mac
+                Type: encrypt then mac (0x0016)
+                Length: 0
+                Data (0 bytes)
+            Extension: Extended Master Secret
+                Type: Extended Master Secret (0x0017)
+                Length: 0

@@ -1,0 +1,198 @@
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Handshake Protocol: Client Hello
+        Content Type: Handshake (22)
+        Version: TLS 1.0 (0x0301)
+        Length: 512
+        Handshake Protocol: Client Hello
+            Handshake Type: Client Hello (1)
+            Length: 508
+            Version: TLS 1.2 (0x0303)
+            Random
+                GMT Unix Time: Aug 31, 1979 04:40:23.000000000 CEST
+                Random Bytes: c7627108316fa8028655bed70b5651b4c22f6ab9ab75617a...
+            Session ID Length: 0
+            Cipher Suites Length: 170
+            Cipher Suites (85 suites)
+                Cipher Suite: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (0xc030)
+                Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 (0xc02c)
+                Cipher Suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (0xc028)
+                Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 (0xc024)
+                Cipher Suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (0xc014)
+                Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA (0xc00a)
+                Cipher Suite: TLS_DH_DSS_WITH_AES_256_GCM_SHA384 (0x00a5)
+                Cipher Suite: TLS_DHE_DSS_WITH_AES_256_GCM_SHA384 (0x00a3)
+                Cipher Suite: TLS_DH_RSA_WITH_AES_256_GCM_SHA384 (0x00a1)
+                Cipher Suite: TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (0x009f)
+                Cipher Suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (0x006b)
+                Cipher Suite: TLS_DHE_DSS_WITH_AES_256_CBC_SHA256 (0x006a)
+                Cipher Suite: TLS_DH_RSA_WITH_AES_256_CBC_SHA256 (0x0069)
+                Cipher Suite: TLS_DH_DSS_WITH_AES_256_CBC_SHA256 (0x0068)
+                Cipher Suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA (0x0039)
+                Cipher Suite: TLS_DHE_DSS_WITH_AES_256_CBC_SHA (0x0038)
+                Cipher Suite: TLS_DH_RSA_WITH_AES_256_CBC_SHA (0x0037)
+                Cipher Suite: TLS_DH_DSS_WITH_AES_256_CBC_SHA (0x0036)
+                Cipher Suite: TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (0x0088)
+                Cipher Suite: TLS_DHE_DSS_WITH_CAMELLIA_256_CBC_SHA (0x0087)
+                Cipher Suite: TLS_DH_RSA_WITH_CAMELLIA_256_CBC_SHA (0x0086)
+                Cipher Suite: TLS_DH_DSS_WITH_CAMELLIA_256_CBC_SHA (0x0085)
+                Cipher Suite: TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384 (0xc032)
+                Cipher Suite: TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384 (0xc02e)
+                Cipher Suite: TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384 (0xc02a)
+                Cipher Suite: TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384 (0xc026)
+                Cipher Suite: TLS_ECDH_RSA_WITH_AES_256_CBC_SHA (0xc00f)
+                Cipher Suite: TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA (0xc005)
+                Cipher Suite: TLS_RSA_WITH_AES_256_GCM_SHA384 (0x009d)
+                Cipher Suite: TLS_RSA_WITH_AES_256_CBC_SHA256 (0x003d)
+                Cipher Suite: TLS_RSA_WITH_AES_256_CBC_SHA (0x0035)
+                Cipher Suite: TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (0x0084)
+                Cipher Suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (0xc02f)
+                Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 (0xc02b)
+                Cipher Suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (0xc027)
+                Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 (0xc023)
+                Cipher Suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (0xc013)
+                Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA (0xc009)
+                Cipher Suite: TLS_DH_DSS_WITH_AES_128_GCM_SHA256 (0x00a4)
+                Cipher Suite: TLS_DHE_DSS_WITH_AES_128_GCM_SHA256 (0x00a2)
+                Cipher Suite: TLS_DH_RSA_WITH_AES_128_GCM_SHA256 (0x00a0)
+                Cipher Suite: TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (0x009e)
+                Cipher Suite: TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (0x0067)
+                Cipher Suite: TLS_DHE_DSS_WITH_AES_128_CBC_SHA256 (0x0040)
+                Cipher Suite: TLS_DH_RSA_WITH_AES_128_CBC_SHA256 (0x003f)
+                Cipher Suite: TLS_DH_DSS_WITH_AES_128_CBC_SHA256 (0x003e)
+                Cipher Suite: TLS_DHE_RSA_WITH_AES_128_CBC_SHA (0x0033)
+                Cipher Suite: TLS_DHE_DSS_WITH_AES_128_CBC_SHA (0x0032)
+                Cipher Suite: TLS_DH_RSA_WITH_AES_128_CBC_SHA (0x0031)
+                Cipher Suite: TLS_DH_DSS_WITH_AES_128_CBC_SHA (0x0030)
+                Cipher Suite: TLS_DHE_RSA_WITH_SEED_CBC_SHA (0x009a)
+                Cipher Suite: TLS_DHE_DSS_WITH_SEED_CBC_SHA (0x0099)
+                Cipher Suite: TLS_DH_RSA_WITH_SEED_CBC_SHA (0x0098)
+                Cipher Suite: TLS_DH_DSS_WITH_SEED_CBC_SHA (0x0097)
+                Cipher Suite: TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (0x0045)
+                Cipher Suite: TLS_DHE_DSS_WITH_CAMELLIA_128_CBC_SHA (0x0044)
+                Cipher Suite: TLS_DH_RSA_WITH_CAMELLIA_128_CBC_SHA (0x0043)
+                Cipher Suite: TLS_DH_DSS_WITH_CAMELLIA_128_CBC_SHA (0x0042)
+                Cipher Suite: TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256 (0xc031)
+                Cipher Suite: TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256 (0xc02d)
+                Cipher Suite: TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256 (0xc029)
+                Cipher Suite: TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256 (0xc025)
+                Cipher Suite: TLS_ECDH_RSA_WITH_AES_128_CBC_SHA (0xc00e)
+                Cipher Suite: TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA (0xc004)
+                Cipher Suite: TLS_RSA_WITH_AES_128_GCM_SHA256 (0x009c)
+                Cipher Suite: TLS_RSA_WITH_AES_128_CBC_SHA256 (0x003c)
+                Cipher Suite: TLS_RSA_WITH_AES_128_CBC_SHA (0x002f)
+                Cipher Suite: TLS_RSA_WITH_SEED_CBC_SHA (0x0096)
+                Cipher Suite: TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (0x0041)
+                Cipher Suite: TLS_ECDHE_RSA_WITH_RC4_128_SHA (0xc011)
+                Cipher Suite: TLS_ECDHE_ECDSA_WITH_RC4_128_SHA (0xc007)
+                Cipher Suite: TLS_ECDH_RSA_WITH_RC4_128_SHA (0xc00c)
+                Cipher Suite: TLS_ECDH_ECDSA_WITH_RC4_128_SHA (0xc002)
+                Cipher Suite: TLS_RSA_WITH_RC4_128_SHA (0x0005)
+                Cipher Suite: TLS_RSA_WITH_RC4_128_MD5 (0x0004)
+                Cipher Suite: TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA (0xc012)
+                Cipher Suite: TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA (0xc008)
+                Cipher Suite: TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA (0x0016)
+                Cipher Suite: TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA (0x0013)
+                Cipher Suite: TLS_DH_RSA_WITH_3DES_EDE_CBC_SHA (0x0010)
+                Cipher Suite: TLS_DH_DSS_WITH_3DES_EDE_CBC_SHA (0x000d)
+                Cipher Suite: TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA (0xc00d)
+                Cipher Suite: TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA (0xc003)
+                Cipher Suite: TLS_RSA_WITH_3DES_EDE_CBC_SHA (0x000a)
+                Cipher Suite: TLS_EMPTY_RENEGOTIATION_INFO_SCSV (0x00ff)
+            Compression Methods Length: 1
+            Compression Methods (1 method)
+                Compression Method: null (0)
+            Extensions Length: 297
+            Extension: server_name
+                Type: server_name (0x0000)
+                Length: 19
+                Server Name Indication extension
+                    Server Name list length: 17
+                    Server Name Type: host_name (0)
+                    Server Name length: 14
+                    Server Name: www.skelbiu.lt
+            Extension: ec_point_formats
+                Type: ec_point_formats (0x000b)
+                Length: 4
+                EC point formats Length: 3
+                Elliptic curves point formats (3)
+                    EC point format: uncompressed (0)
+                    EC point format: ansiX962_compressed_prime (1)
+                    EC point format: ansiX962_compressed_char2 (2)
+            Extension: elliptic_curves
+                Type: elliptic_curves (0x000a)
+                Length: 28
+                Elliptic Curves Length: 26
+                Elliptic curves (13 curves)
+                    Elliptic curve: secp256r1 (0x0017)
+                    Elliptic curve: secp521r1 (0x0019)
+                    Elliptic curve: brainpoolP512r1 (0x001c)
+                    Elliptic curve: brainpoolP384r1 (0x001b)
+                    Elliptic curve: secp384r1 (0x0018)
+                    Elliptic curve: brainpoolP256r1 (0x001a)
+                    Elliptic curve: secp256k1 (0x0016)
+                    Elliptic curve: sect571r1 (0x000e)
+                    Elliptic curve: sect571k1 (0x000d)
+                    Elliptic curve: sect409k1 (0x000b)
+                    Elliptic curve: sect409r1 (0x000c)
+                    Elliptic curve: sect283k1 (0x0009)
+                    Elliptic curve: sect283r1 (0x000a)
+            Extension: signature_algorithms
+                Type: signature_algorithms (0x000d)
+                Length: 32
+                Signature Hash Algorithms Length: 30
+                Signature Hash Algorithms (15 algorithms)
+                    Signature Hash Algorithm: 0x0601
+                        Signature Hash Algorithm Hash: SHA512 (6)
+                        Signature Hash Algorithm Signature: RSA (1)
+                    Signature Hash Algorithm: 0x0602
+                        Signature Hash Algorithm Hash: SHA512 (6)
+                        Signature Hash Algorithm Signature: DSA (2)
+                    Signature Hash Algorithm: 0x0603
+                        Signature Hash Algorithm Hash: SHA512 (6)
+                        Signature Hash Algorithm Signature: ECDSA (3)
+                    Signature Hash Algorithm: 0x0501
+                        Signature Hash Algorithm Hash: SHA384 (5)
+                        Signature Hash Algorithm Signature: RSA (1)
+                    Signature Hash Algorithm: 0x0502
+                        Signature Hash Algorithm Hash: SHA384 (5)
+                        Signature Hash Algorithm Signature: DSA (2)
+                    Signature Hash Algorithm: 0x0503
+                        Signature Hash Algorithm Hash: SHA384 (5)
+                        Signature Hash Algorithm Signature: ECDSA (3)
+                    Signature Hash Algorithm: 0x0401
+                        Signature Hash Algorithm Hash: SHA256 (4)
+                        Signature Hash Algorithm Signature: RSA (1)
+                    Signature Hash Algorithm: 0x0402
+                        Signature Hash Algorithm Hash: SHA256 (4)
+                        Signature Hash Algorithm Signature: DSA (2)
+                    Signature Hash Algorithm: 0x0403
+                        Signature Hash Algorithm Hash: SHA256 (4)
+                        Signature Hash Algorithm Signature: ECDSA (3)
+                    Signature Hash Algorithm: 0x0301
+                        Signature Hash Algorithm Hash: SHA224 (3)
+                        Signature Hash Algorithm Signature: RSA (1)
+                    Signature Hash Algorithm: 0x0302
+                        Signature Hash Algorithm Hash: SHA224 (3)
+                        Signature Hash Algorithm Signature: DSA (2)
+                    Signature Hash Algorithm: 0x0303
+                        Signature Hash Algorithm Hash: SHA224 (3)
+                        Signature Hash Algorithm Signature: ECDSA (3)
+                    Signature Hash Algorithm: 0x0201
+                        Signature Hash Algorithm Hash: SHA1 (2)
+                        Signature Hash Algorithm Signature: RSA (1)
+                    Signature Hash Algorithm: 0x0202
+                        Signature Hash Algorithm Hash: SHA1 (2)
+                        Signature Hash Algorithm Signature: DSA (2)
+                    Signature Hash Algorithm: 0x0203
+                        Signature Hash Algorithm Hash: SHA1 (2)
+                        Signature Hash Algorithm Signature: ECDSA (3)
+            Extension: Heartbeat
+                Type: Heartbeat (0x000f)
+                Length: 1
+                Mode: Peer allowed to send requests (1)
+            Extension: Padding
+                Type: Padding (0x0015)
+                Length: 189
+                Padding Data: 000000000000000000000000000000000000000000000000...
+                    Padding length: 0
+                    Padding Data: <MISSING>
